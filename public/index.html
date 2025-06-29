@@ -53,13 +53,14 @@
       </header>
 
       <main class="container">
-        <!-- Admin Controls Section -->
+        <!-- Admin Controls Section - Now side by side -->
         <section
           id="adminControls"
-          class="admin-only-section"
+          class="two-column-section" 
           style="display: none"
         >
-          <div class="card">
+          <!-- User Management Card -->
+          <div class="card column-left">
             <h2><i class="icon-users"></i> User Management</h2>
             <button id="showUsersBtn" class="btn btn-toggle">View Users</button>
 
@@ -113,8 +114,8 @@
             </div>
           </div>
 
-          <!-- Password Reset Section -->
-          <div class="card password-reset">
+          <!-- Password Reset Card -->
+          <div class="card column-right">
             <h2><i class="icon-lock"></i> Password Reset</h2>
             <form id="passwordResetForm">
               <div class="form-group">
@@ -142,9 +143,10 @@
           </div>
         </section>
 
-        <!-- Key Management Section -->
-        <section class="key-management">
-          <div class="card">
+        <!-- Key Management Section - col-md-4 and col-md-8 layout -->
+        <section class="key-management-container">
+          <!-- Form Card (col-md-4) -->
+          <div class="card form-card">
             <h2><i class="icon-key"></i> Add New Key Assignment</h2>
             <form id="keyForm">
               <div class="form-row">
@@ -230,7 +232,8 @@
             </form>
           </div>
 
-          <div class="card">
+          <!-- Table Card (col-md-8) -->
+          <div class="card table-card">
             <div class="search-bar">
               <input
                 type="text"
@@ -267,9 +270,10 @@
           </div>
         </section>
 
+        <!-- User Controls (hidden by default) -->
         <div id="userControls" style="display: none">
           <h2>Add New Key Assignment</h2>
-          <form id="keyForm">
+          <form id="userKeyForm">
             <!-- Your key form fields here -->
           </form>
 
